@@ -28,7 +28,7 @@ class Question(models.Model):
 class Choice(models.Model):
 	"""Question relate question"""
 	question=models.ForeignKey(Question)
-	Choice_text=models.CharField(max_length=200)
+	choice_text=models.CharField(max_length=200)
 	votes=models.IntegerField(default=0)
 	def __unicode__(self):
-		return self.Choice_text
+		return self.choice_text
